@@ -1,0 +1,42 @@
+{
+    "actions": [
+      {
+        "name": "создать файл",
+        "result": "",
+        "params": {
+          "fileName": "example.txt"
+        }
+      },
+      {
+        "name": "Переименовать файл",
+        "result": "",
+        "params": {
+          "currentName": "example.txt",
+          "newName": "new_example.txt"
+        }
+      },
+      {
+        "name": "удалить файл",
+        "result": "",
+        "params": {
+          "fileName": "new_example.txt"
+        }
+      },
+      {
+        "name": "время создания",
+        "result": "",
+        "params": {
+          "fileName": "example.txt"
+        }
+      },
+      {
+        "name": "записать в файл",
+        "result": "",
+        "params": {
+          "fileName": "example.txt",
+          "content": "Hello, world!"
+        }
+      }
+    ]
+  }
+  
