@@ -1,4 +1,4 @@
-package handler
+package worker
 
 import (
 	"fmt"
@@ -8,12 +8,12 @@ import (
 	"test_task/models"
 )
 
-type Handle struct {
+type WorkQueue struct {
 	Task *models.Action
 }
 
 // Функция реализующая действия над файлами
-func (t *Handle) Worker() *models.Action {
+func (t *WorkQueue) Working() *models.Action {
 	checkValue := strings.ToLower(t.Task.Title)
 	switch {
 	case strings.Contains(checkValue, "создать"):
@@ -114,7 +114,6 @@ func rename(old, new string) error {
 
 func timeInfo(name string) (string, error) {
 	info, err := os.Stat(name)
-	log.Println(info)
 	if err != nil {
 		return "", err
 	}
